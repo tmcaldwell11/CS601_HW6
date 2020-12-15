@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CS601 HW6 Vue App</title>
+  <link rel="stylesheet" href="./css/styles.css">
+
+    <script defer src="./scripts/vue.js"></script>
+    <script defer src="./scripts/main.js"></script>
+</head>
+
+
+<body>
+  <div id="app">
+      <h1>{{ Header }}</h1>
+      <div class="row">
+      <div class="card column">
+        <img :src="image1" @mouseenter="image1 = img2" @mouseleave="image1 = img1"  />
+        <div class="container">
+          <p>{{ imageText1 }}</p>
+        </div>
+      </div>
+
+      <div class="card column">
+        <img :src="image2" @mouseover="image2 = img4" @mouseleave="image2 = img3" />
+        <div class="container">
+          <p>{{ imageText2 }}</p>
+        </div>
+      </div>
+
+      <div class="card column">
+        <img :src="image3" @mouseover="image3 = img6" @mouseleave="image3 = img5" />
+        <div class="container">
+          <p>{{ imageText3 }}</p>
+        </div>
+      </div>
+
+      <div class="card column">
+        <img :src="image4" @mouseover="image4 = img8" @mouseleave="image4 = img7" />
+        <div class="container">
+          <p>{{ imageText4 }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
